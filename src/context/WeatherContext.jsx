@@ -4,11 +4,10 @@ import useNavigatorLocation from "../hooks/useNavigatorLocation";
 
 const WeatherContext = createContext();
 
- export const useWeatherContext = ({ children }) => {
+  export const MyProvider = ({ children }) => {
   const apiKey = "594b45ed80701f1277f00b354c2088d1";
-  const { myActualLatitude, myActualLongitude, loading } =
-    useNavigatorLocation();
-  const [data, setData] = useState(null);
+  const { myActualLatitude, myActualLongitude, loading } = useNavigatorLocation();
+  const [data, setData] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +22,7 @@ const WeatherContext = createContext();
             description: weather[0].description,
             main: weather[0].main,
             icon: `http://openweathermap.org/img/w/${weather[0].icon}.png`,
-          });
+          })
         } catch (error) {
           console.error("Error al obtener datos de la API:", error);
         }
@@ -35,4 +34,4 @@ const WeatherContext = createContext();
   return <WeatherContext.Provider value={{ data, loading }}> {children} </WeatherContext.Provider>
 };
 
-export default useWeatherContext;
+export default WeatherContext;

@@ -1,9 +1,12 @@
 import { useContext } from "react";
-import  WeatherContext from "../context/useWeatherContext";
+import  WeatherContext from "../context/WeatherContext";
 
 const ShowWeatherData = () => {
+  
+  const time = new Date().getTime()
+  const date = new Date(time).toLocaleDateString()
+  
   const { data, loading } = useContext(WeatherContext);
-  console.log(loading)
 
   return (
     <div>
@@ -11,11 +14,12 @@ const ShowWeatherData = () => {
         <p>cargando datos...</p>
       ) : (
         <div className="weatherCard">
-          <h1>{data.name.toUpperCase()}</h1>
+          <h1>{data.name}</h1>
+          <h2>{date}</h2>
           <h2>
-            {data.main.toUpperCase()} <img className="icon" src={data.icon} alt="Weather Icon" />
+            {data.main} <img className="weatherCardImage" src={data.icon} alt="Weather Icon" />
           </h2>
-          <h3>{data.description.toUpperCase()}</h3>
+          <h3>{data.description}</h3>
         </div>
       )}
     </div>
