@@ -76,8 +76,8 @@ div.weatherCardInFiveDays > h2 {
 
 .menuButton {
   position: absolute;
-  top: 18px;
-  right: 67vh;
+  top: 5px;
+  right: 16vh;
   padding: 20px;
   background-color: #4caf50;
   color: white;
