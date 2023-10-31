@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import WeatherInFiveDaysContext from "../context/WeatherInFiveDaysContext";
+import WeatherInFiveDaysContext from "../context/MyWeatherInFiveDaysContext";
 const ShowWeatherDataInFiveDays = () => {
-  const { data, loading } = useContext(WeatherInFiveDaysContext);
+  const { data } = useContext(WeatherInFiveDaysContext);
 
   const weatherCards = [...Array(6)].map((_, index) => (
     <div className="weatherCardInFiveDays" key={index}>
@@ -13,20 +13,16 @@ const ShowWeatherDataInFiveDays = () => {
           src={data[`icon${index}`]}
         />
       </h2>
-      <h3>{data[`description${index}`]}</h3>
+      <h2>{data[`description${index}`]}</h2>
     </div>
   ));
 
   return (
-    <div>
-      {loading ? (
-        <p>cargando datos...</p>
-      ) : (
+    <div className="weatherCardInFiveDaysContainer">
         <>
             <h1>{data.name}</h1>
             {weatherCards}
         </>
-      )}
     </div>
   );
 };

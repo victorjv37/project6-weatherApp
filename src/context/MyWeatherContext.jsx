@@ -2,11 +2,11 @@ import { useEffect, useState, createContext } from "react";
 import axios from "axios";
 import useNavigatorLocation from "../hooks/useNavigatorLocation";
 
-const WeatherContext = createContext();
+const MyWeatherContext = createContext();
 
   export const MyProvider = ({ children }) => {
   const apiKey = "594b45ed80701f1277f00b354c2088d1";
-  const { myActualLatitude, myActualLongitude, loading } = useNavigatorLocation();
+  const { myActualLatitude, myActualLongitude } = useNavigatorLocation();
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const WeatherContext = createContext();
     fetchData();
   }, [myActualLatitude, myActualLongitude]);
 
-  return <WeatherContext.Provider value={{ data, loading }}> {children} </WeatherContext.Provider>
+  return <MyWeatherContext.Provider value={{ data, myActualLatitude, myActualLongitude }}> {children} </MyWeatherContext.Provider>
 };
 
-export default WeatherContext;
+export default MyWeatherContext;

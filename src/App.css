@@ -5,6 +5,9 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 div.weatherCard > h2 {
@@ -35,7 +38,8 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  margin-top: -19px;
 }
 
 div.weatherCardInFiveDays > h1,
@@ -58,13 +62,52 @@ div.weatherCardInFiveDays > h2 {
   border: 0px;
 }
 
+.weatherCardInFiveDaysContainer {
+  top: 4vh;
+  position: relative;
+  margin-bottom: 3vh;
+}
+
+.menuButtonContainer {
+  position: absolute;
+  top: 0px;
+  right: 0vh;
+}
+
+.menuButton {
+  position: absolute;
+  top: 18px;
+  right: 67vh;
+  padding: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
 #buttonToSwitch {
-    position: fixed;
-    top: 35px;
-    right: 35px;
+  position: fixed;
+  top: 18px;
+  right: 18px;
 }
 
 #buttonToSwitch > button {
+  padding: 3px 7px;
+  font-size: 15px;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#buttonToSwitchInCity {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+}
+
+#buttonToSwitchInCity > button {
   padding: 3px 7px;
   font-size: 15px;
   background-color: #000000;
