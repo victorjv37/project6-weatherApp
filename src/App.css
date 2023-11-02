@@ -10,7 +10,7 @@
   --teal-800: #115e59;
   --teal-900: #134e4a;
   --teal-950: #042f2e;
-  font-family: cursive;
+  font-family: "Times New Roman", Times, serif;
 }
 
 #root {
@@ -90,7 +90,9 @@ button {
 .cityButton {
   padding: 9%;
   width: 85%;
-  margin: 1%;
+  margin: 3%;
+  display: flex;
+  justify-content: center;
 }
 
 #menuButtonContainer {
@@ -222,9 +224,8 @@ h2 {
 #galicia {
   color: white;
   background-image: url("https://www.shutterstock.com/image-photo/panoramic-view-viewpoint-miranda-galicia-260nw-139677946.jpg");
-  background-size: 102%;
+  background-size: 140%;
   background-repeat: no-repeat;
-  background-position-y: 0%;
 }
 
 #toledo {
@@ -235,6 +236,15 @@ h2 {
   background-position-y: 100%;
 }
 
+p {
+  font-size: 2vh;
+  background-color: rgba(255, 255, 255, 0.682);
+  border-radius: 2vh;
+  color: #202547;
+  width: 12%;
+  display: flex;
+  justify-content: center;
+}
 
 @media screen and (max-width: 750px) {
   body {
@@ -247,22 +257,23 @@ h2 {
     font-size: 8px; /* La mitad de 16px */
   }
 
-  a,#menuButton {
+  a,
+  #menuButton {
     padding: 1vh;
     font-size: 8px;
   }
 
-  #menuButtonContainer{
+  #menuButtonContainer {
     top: -4%;
   }
 
-  #setCityButtonsContainer{
+  #setCityButtonsContainer {
     position: relative;
     top: 10%;
   }
 
   #galicia {
-    background-size: 108%;
+    background-size: 175%;
   }
 
   .link {
@@ -280,7 +291,7 @@ h2 {
   .weatherDataContainer > h1 {
     font-size: 2vh; /* La mitad de 8vh */
   }
-  
+
   .weatherDataContainer {
     width: 20%; /* La mitad de 8vh */
   }
@@ -292,8 +303,7 @@ h2 {
   .weatherCardsInFiveDaysContainer {
     font-size: 7.5px; /* La mitad de 15px */
   }
-  .weatherCardInFiveDays{
+  .weatherCardInFiveDays {
     width: 100%;
   }
 }
-
