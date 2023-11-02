@@ -236,12 +236,12 @@ h2 {
   background-position-y: 100%;
 }
 
-p {
+.p {
   font-size: 2vh;
   background-color: rgba(255, 255, 255, 0.682);
   border-radius: 2vh;
   color: #202547;
-  width: 12%;
+  width: 19%;
   display: flex;
   justify-content: center;
 }
