@@ -12,22 +12,22 @@ const ButtonToSetCity = ({setShowButtonToSetCity}) => {
 
   return (
     <div className="buttonContainer">
-      <button value="Valencia" onClick={handleCity}>
+      <button className='cityButton' id="valencia" value="Valencia" onClick={handleCity}>
         Valencia
       </button>
-      <button value="Madrid" onClick={handleCity}>
+      <button className='cityButton' id="madrid" value="Madrid" onClick={handleCity}>
         Madrid
       </button>
-      <button value="Barcelona" onClick={handleCity}>
+      <button className='cityButton' id="barcelona" value="Barcelona" onClick={handleCity}>
         Barcelona
       </button>
-      <button value="Sevilla" onClick={handleCity}>
+      <button className='cityButton' id="sevilla" value="Sevilla" onClick={handleCity}>
         Sevilla
       </button>
-      <button value="Galicia" onClick={handleCity}>
+      <button className='cityButton' id="galicia" value="Galicia" onClick={handleCity}>
         Galicia
       </button>
-      <button value="Toledo" onClick={handleCity}>
+      <button className='cityButton' id="toledo" value="Toledo" onClick={handleCity}>
         Toledo
       </button>
     </div>

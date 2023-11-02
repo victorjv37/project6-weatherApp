@@ -6,11 +6,11 @@ const ButtonToSwitch = ({setShowWeather, showWeather}) => {
     } 
 
   return (
-    <div id="buttonToSwitch">
+    <div className="button">
         <button onClick={handleSwitch}>
             {showWeather ?
-            <p>Time to five days</p> :
-            <p>Time Today</p>
+            <p>☔TIME🔜​</p> :
+            <p>TODAY☔</p>
             }
         </button>
     </div>

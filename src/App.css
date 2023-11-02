@@ -1,117 +1,299 @@
 * {
-  border: 1px solid red;
-}
-body {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  --teal-50: #f0fdfa;
+  --teal-100: #ccfbf1;
+  --teal-200: #99f6e4;
+  --teal-300: #5eead4;
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e;
+  --teal-800: #115e59;
+  --teal-900: #134e4a;
+  --teal-950: #042f2e;
+  font-family: cursive;
 }
 
-div.weatherCard > h2 {
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+/* Establecer un tamaño de fuente base y evitar zoom en dispositivos móviles */
+body {
+  color: #99f6e4;
+  background-image: url("https://www.shutterstock.com/image-photo/fine-art-landscape-photo-dark-260nw-2290772533.jpg");
+  background-size: 400%;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-size: 3.5vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hacer que las imágenes sean 100% del ancho de su contenedor */
+img {
+  max-width: 100%;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  height: 7vh;
+}
+
+/* Estilos para contenedor principal */
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-div.weatherCard > h1,
-h2,
-h3,
-img {
-  padding: 5vh;
-}
-.weatherCard {
-  display: flex;
-  flex-direction: column;
+/* Estilos para botones */
+
+button {
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  border: transparent;
+  color: white;
+  background-color: #202547;
+  border-radius: 2vh;
 }
 
-.weatherCardImage {
-  width: 33%;
+.button {
+  display: flex;
+  position: relative;
   padding: 0px;
-  border: 0px;
+  top: -4%;
+  right: -40%;
+  margin-right: 5%;
+  font-size: 16px;
+  text-align: center;
+}
+
+.buttonContainer {
+  position: relative;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cityButton {
+  padding: 9%;
+  width: 85%;
+  margin: 1%;
+}
+
+#menuButtonContainer {
+  position: relative;
+  top: -1%;
+  right: 36%;
+}
+
+#menuButton {
+  padding: 2vh;
+}
+
+#timeTodayCityButtonSwitcherContainer {
+  position: relative;
+  top: -3%;
+  left: 44%;
+}
+
+#buttonToSwitchInCity {
+  display: flex;
+  position: relative;
+  padding: 0px;
+  top: -8%;
+  right: -40%;
+  margin-right: 5%;
+  font-size: 16px;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  background-color: #202547;
+  padding: 2vh;
+  border-radius: 2vh;
+  font-size: 16px;
+}
+
+.link {
+  position: relative;
+  top: 2.2%;
+  left: -34%;
+  display: flex;
+}
+
+#menuLink {
+  position: relative;
+  right: -4vh;
+  top: 2vh;
+  color: white;
+  background-color: #202547;
+}
+
+h1 {
+  font-size: 4.5vh;
+}
+
+h2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.weatherDataContainer {
+  position: relative;
+  top: -8%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.weatherDataContainer > h1 {
+  font-size: 8vh;
+}
+
+.weatherDataContainer > h2 {
+  font-size: 4.5vh;
+}
+
+.weatherCardsInFiveDaysContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
 }
 
 .weatherCardInFiveDays {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin-top: -19px;
+  width: 70%;
 }
 
-div.weatherCardInFiveDays > h1,
-h2,
-h3,
-img {
-  padding: 1.75vh;
-}
-
-div.weatherCardInFiveDays > h2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.weatherCardInFiveDaysImage {
-  width: 33%;
-  padding: 0px;
-  border: 0px;
-}
-
-.weatherCardInFiveDaysContainer {
-  top: 4vh;
-  position: relative;
-  margin-bottom: 3vh;
-}
-
-.menuButtonContainer {
-  position: absolute;
-  top: 0px;
-  right: 0vh;
-}
-
-.menuButton {
-  position: absolute;
-  top: 5px;
-  right: 16vh;
-  padding: 20px;
-  background-color: #4caf50;
+#valencia {
   color: white;
-  border: none;
-  border-radius: 22px;
-  cursor: pointer;
+  background-image: url("https://brainsre.news/wp-content/uploads/2022/02/valencia-1024x576.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
 }
 
-#buttonToSwitch {
-  position: fixed;
-  top: 18px;
-  right: 18px;
+#madrid {
+  color: white;
+  background-image: url("https://naukas.com/fx/uploads/2010/12/Madrid-Panor%C3%A1mico.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
 }
 
-#buttonToSwitch > button {
-  padding: 3px 7px;
-  font-size: 15px;
-  background-color: #000000;
-  color: #fff;
-  border-radius: 20px;
-  cursor: pointer;
+#barcelona {
+  color: white;
+  background-image: url("https://live.staticflickr.com/8676/28041647890_1de3c4d2c7_b.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
 }
 
-#buttonToSwitchInCity {
-  position: fixed;
-  top: 18px;
-  right: 18px;
+#sevilla {
+  color: white;
+  background-image: url("https://blogdestinia.com/wp-content/uploads/2018/09/sevilla-panoramica-1024x457.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
 }
 
-#buttonToSwitchInCity > button {
-  padding: 3px 7px;
-  font-size: 15px;
-  background-color: #000000;
-  color: #fff;
-  border-radius: 20px;
-  cursor: pointer;
+#galicia {
+  color: white;
+  background-image: url("https://www.shutterstock.com/image-photo/panoramic-view-viewpoint-miranda-galicia-260nw-139677946.jpg");
+  background-size: 102%;
+  background-repeat: no-repeat;
+  background-position-y: 0%;
 }
+
+#toledo {
+  color: white;
+  background-image: url("https://farm1.staticflickr.com/878/41102062581_070caab9d6_o.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+}
+
+
+@media screen and (max-width: 750px) {
+  body {
+    font-size: 1vh; /* La mitad de 3.5vh */
+  }
+
+  button,
+  .button {
+    top: -15%;
+    font-size: 8px; /* La mitad de 16px */
+  }
+
+  a,#menuButton {
+    padding: 1vh;
+    font-size: 8px;
+  }
+
+  #menuButtonContainer{
+    top: -4%;
+  }
+
+  #setCityButtonsContainer{
+    position: relative;
+    top: 10%;
+  }
+
+  #galicia {
+    background-size: 108%;
+  }
+
+  .link {
+    top: -11%;
+  }
+
+  h1 {
+    font-size: 1.5vh; /* La mitad de 4.5vh */
+  }
+
+  h2 {
+    font-size: 1.5vh; /* La mitad de 4.5vh */
+  }
+
+  .weatherDataContainer > h1 {
+    font-size: 2vh; /* La mitad de 8vh */
+  }
+  
+  .weatherDataContainer {
+    width: 20%; /* La mitad de 8vh */
+  }
+
+  .weatherDataContainer > h2 {
+    font-size: 1.5vh; /* La mitad de 4.5vh */
+  }
+
+  .weatherCardsInFiveDaysContainer {
+    font-size: 7.5px; /* La mitad de 15px */
+  }
+  .weatherCardInFiveDays{
+    width: 100%;
+  }
+}
+

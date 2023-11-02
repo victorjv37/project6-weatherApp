@@ -1,20 +1,23 @@
-
-const ButtonToSwitchInCity = ({setShowWeatherInCity, showWeatherInCity}) => {
-    
-    const handleSwitch = () => {
-        setShowWeatherInCity(!showWeatherInCity)
-    } 
+const ButtonToSwitchInCity = ({ setShowWeatherInCity, showWeatherInCity }) => {
+  const handleSwitch = () => {
+    setShowWeatherInCity(!showWeatherInCity);
+  };
 
   return (
-    <div id="buttonToSwitchInCity">
+    <>
+      {showWeatherInCity ? (
         <button onClick={handleSwitch}>
-            {showWeatherInCity ?
-            <p>Time to five days</p> :
-            <p>Time Today</p>
-            }
+          <p>☔TIME🔜</p>
         </button>
-    </div>
-  )
-}
+      ) : (
+        <div id="timeTodayCityButtonSwitcherContainer">
+          <button onClick={handleSwitch}>
+            <p>TODAY☔</p>
+          </button>
+        </div>
+      )}
+    </>
+  );
+};
 
-export default ButtonToSwitchInCity
+export default ButtonToSwitchInCity;

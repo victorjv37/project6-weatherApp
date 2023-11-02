@@ -16,25 +16,29 @@ const CitiesWeather = () => {
   return (
     <>
       {showButtonToSetCity ? (
-        <div className="cityButtons">
-          <NavLink to="/">HOME</NavLink>
+        <div id="setCityButtonsContainer">
+          <NavLink id="menuLink" to="/">
+            HOME​🏠​
+          </NavLink>
           <ButtonToSetCity setShowButtonToSetCity={setShowButtonToSetCity} />
         </div>
       ) : showWeatherInCity ? (
-        <div>
-          <div className="menuButtonContainer">
-            <button className="menuButton" onClick={handleMenu}>
-              MENU
+        <div className="container">
+          <div  id="menuButtonContainer">
+            <button id="menuButton" onClick={handleMenu}>
+              CITY MENU🏙️
             </button>
           </div>
-          <ButtonToSwitchInCity
-            showWeatherInCity={showWeatherInCity}
-            setShowWeatherInCity={setShowWeatherInCity}
-          />
+          <div id="buttonToSwitchInCity">
+            <ButtonToSwitchInCity
+              showWeatherInCity={showWeatherInCity}
+              setShowWeatherInCity={setShowWeatherInCity}
+            />
+          </div>
           <ShowCityWeatherData />
         </div>
       ) : (
-        <div className="cityWeatherInFiveDays">
+        <div className="container">
           <ButtonToSwitchInCity
             showWeatherInCity={showWeatherInCity}
             setShowWeatherInCity={setShowWeatherInCity}

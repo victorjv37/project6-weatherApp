@@ -1,14 +1,13 @@
 import MyWeather from "./pages/MyWeather";
 
-import "./App.css";
 import { NavLink } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <NavLink to="/citiesweather">Cities Weather</NavLink>
+    <div className="container">
+      <div className="link"><NavLink to="/citiesweather">​CITY MENU🏙️​</NavLink></div>
       <MyWeather />
-    </>
+    </div>
   );
 }
 

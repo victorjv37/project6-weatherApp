@@ -9,7 +9,7 @@ const ShowWeatherDataInFiveDays = () => {
       <h2>
         {data[`main${index}`]}
         <img
-          className="weatherCardInFiveDaysImage"
+          className="weatherCardImage"
           src={data[`icon${index}`]}
         />
       </h2>
@@ -18,7 +18,7 @@ const ShowWeatherDataInFiveDays = () => {
   ));
 
   return (
-    <div className="weatherCardInFiveDaysContainer">
+    <div className="weatherCardsInFiveDaysContainer">
       <h1>{data.name}</h1>
       {weatherCards}
     </div>

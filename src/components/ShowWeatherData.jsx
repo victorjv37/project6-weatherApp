@@ -9,7 +9,7 @@ const ShowWeatherData = () => {
   const { data } = useContext(WeatherContext);
 
   return (
-        <div className="weatherCard">
+        <div className="weatherDataContainer" >
           <h1>{data.name}</h1>
           <h2>{date}</h2>
           <h2>

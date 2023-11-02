@@ -4,9 +4,9 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
 
-import "./index.css";
-
 import CitiesWeather from "./pages/CitiesWeather.jsx";
+
+import "./App.css";
 
 import { MyProviderInFiveDays } from "./context/MyWeatherInFiveDaysContext.jsx";
 import { MyProvider } from "./context/MyWeatherContext.jsx";

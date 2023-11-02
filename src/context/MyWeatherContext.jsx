@@ -16,6 +16,7 @@ const MyWeatherContext = createContext();
           const response = await axios.get(
             `https://api.openweathermap.org/data/2.5/weather?lat=${myActualLatitude}&lon=${myActualLongitude}&appid=${apiKey}`
           );
+          console.log(response)
           const { weather, name } = response.data;
           setData({
             name: name,
